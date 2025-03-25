@@ -28,10 +28,10 @@ public class TestClass {
     }
     @Test
     public void performSearch() {
-        WebElement searchGoogle = driver.findElement(By.name("_nkw"));
-        searchGoogle.sendKeys("test search bar");
+        WebElement searchEbay = driver.findElement(By.name("_nkw"));
+        searchEbay.sendKeys("test search bar");
 
-        searchGoogle.sendKeys(Keys.ENTER);
+        searchEbay.sendKeys(Keys.ENTER);
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".srp-results")));
