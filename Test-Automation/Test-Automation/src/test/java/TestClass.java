@@ -34,12 +34,14 @@ public class TestClass {
         searchGoogle.sendKeys(Keys.ENTER);
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".srp-results")));
 
         System.out.println("New Title: " + driver.getTitle());
     }
 
     @AfterTest
     public void teardown() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         driver.quit();
     }
 }
