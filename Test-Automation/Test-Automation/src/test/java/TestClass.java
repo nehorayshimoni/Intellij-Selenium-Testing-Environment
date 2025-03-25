@@ -41,7 +41,6 @@ public class TestClass {
 
     @AfterTest
     public void teardown() {
-        WebDriverWait wait = new WebDriverWait(driver, 5);
         driver.quit();
     }
 }
